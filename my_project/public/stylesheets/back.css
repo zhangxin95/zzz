@@ -117,13 +117,19 @@ img{display:block;border:0;}
 	height:33px;
 	line-height: 33px;
 }
-.fun .menu li{
-	height: 42px;
-	padding-left: 40px;
+.fun .menu>li{
+	min-height: 42px;
+	text-indent: 40px;
 	line-height: 42px;
 	border-top: 1px solid #7f7f7f;
-	background: url(../images/menu_1.png)no-repeat center;
+	background: url(../images/menu_1.png)no-repeat top left;
 	cursor: pointer;
+}
+.fun .menu>li a{
+	color: #DDDDDD;
+}
+.fun .menu>li ul{
+	display: none;
 }
 .show{
 	position: absolute;
@@ -148,7 +154,11 @@ img{display:block;border:0;}
 	bottom: 0;
 	right: 0;
 	overflow: auto;
-	font-size: 40px;
 	background: url(../images/body_bj.jpg);
 	padding: 0 10px;
+}
+.cont iframe{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
 }

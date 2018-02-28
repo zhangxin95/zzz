@@ -77,9 +77,13 @@
 		</div>
 		<div class="fun clearfix">
 			<div class="menu">
-				<div>
 				<p>导航菜单</p>
-				<li>商品管理</li>
+				<li>商品管理
+					<ul>
+						<li><a target="if" href="goodslist">商品列表</a></li>
+						<li><a target="if" href="addgoods">添加商品</a></li>
+					</ul>
+				</li>
 				<li>促销管理</li>
 				<li>订单管理</li>
 				<li>广告管理</li>
@@ -95,21 +99,31 @@
 				<li>邮件群发管理</li>
 				<li>移动版管理</li>
 				<li>模板堂知识库</li>
-				</div>
 			</div>
 			<div class="show">
 				<img src="images/showbg_03.jpg"/>
 			</div>
 			<div class="cont">
-				<div class="cont-add">
-					<p>
-						<a href="#">ECSHOP管理中心</a>
-						<span>- 添加新商品 </span>
-						<img src="images/jnsy.png" alt="" />
-					</p>
-				</div>
+				<iframe name="if">
+				
+				</iframe>
 			</div>
+			
 		</div>
 	</body>
-
 </html>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>	
+	$(".menu>li").click(function(e){
+		var e=e||event;
+		e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+		if($(this).children("ul").css("display")=="none"){
+//			console.log(00);
+			$(this).css("background","url(images/menu1_1.png)no-repeat top left")
+				   .children("ul").css("display","block")
+		}else{
+			$(this).css("background","url(images/menu_1.png)no-repeat top left")
+				   .children("ul").css("display","none")
+		}
+	})
+</script>

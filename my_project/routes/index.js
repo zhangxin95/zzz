@@ -8,5 +8,11 @@ router.get('/', function(req, res, next) {
 router.get('/back', function(req, res, next) {
   res.render('back', { title: 'ECSHOP管理中心' });
 });
+router.get('/addgoods', function(req, res, next) {
+  res.render('addgoods', { title: '' });
+});
+router.get('/goodslist', function(req, res, next) {
+  res.render('goodslist', { title: '' });
+});
 
 module.exports = router;
