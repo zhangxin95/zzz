@@ -104,7 +104,7 @@
 				<img src="images/showbg_03.jpg"/>
 			</div>
 			<div class="cont">
-				<iframe name="if">
+				<iframe name="if" frameborder="0" scrolling="auto">
 				
 				</iframe>
 			</div>
@@ -114,16 +114,20 @@
 </html>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>	
-	$(".menu>li").click(function(e){
-		var e=e||event;
-		e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+	$(".menu>li").click(function(){
+//		var e=e||event;
+//		e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
 		if($(this).children("ul").css("display")=="none"){
-//			console.log(00);
 			$(this).css("background","url(images/menu1_1.png)no-repeat top left")
 				   .children("ul").css("display","block")
 		}else{
 			$(this).css("background","url(images/menu_1.png)no-repeat top left")
 				   .children("ul").css("display","none")
 		}
+	})
+	$(".menu>li ul li").click(function(e){
+		var e=e||event;
+		e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+		changeFrameHeight()
 	})
 </script>
